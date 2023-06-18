@@ -11,8 +11,8 @@ import PageNotFound from '../PageNotFound/PageNotFound';
 
 function App() {
   return (
-    <div className="App">
-      <div className="App__container">
+    <section className="app">
+      <div className="app__container">
         <Routes>
           <Route exact path="/" element={<Main />} />
           <Route exact path="/movies" element={<Movies />} />
@@ -23,7 +23,7 @@ function App() {
           <Route exact path="*" element={<PageNotFound />} />
         </Routes>
       </div>
-    </div>
+    </section>
   );
 }
 

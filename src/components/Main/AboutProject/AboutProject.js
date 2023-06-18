@@ -4,7 +4,7 @@ import './AboutProject.css';
 
 function AboutProject() {
   return (
-    <div id="project" className="project">
+    <section id="project" className="project">
       <Caption name={"О проекте"} />
       <div className="project__info">
         <div className="project__paragraph">
@@ -17,16 +17,16 @@ function AboutProject() {
         </div>
       </div>
       <div className="project__progressbar">
-        <div className="project__column project__column_green">
-          <span className="project__progressbar_green">1 неделя</span>
-          <span className="project__progressbar_text">Back-end</span>
+        <div className="project__column project__column_color_green">
+          <span className="project__progressbar-green">1 неделя</span>
+          <span className="project__progressbar-text">Back-end</span>
         </div>
-        <div className="project__column project__column_front">
-          <span className="project__progressbar_white">4 недели</span>
-          <span className="project__progressbar_text">Front-end</span>
+        <div className="project__column project__column_color_white">
+          <span className="project__progressbar-white">4 недели</span>
+          <span className="project__progressbar-text">Front-end</span>
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

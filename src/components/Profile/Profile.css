@@ -85,8 +85,8 @@
 }
 
 .profile__text:focus {
-  border: 1px solid #E8E8E8;
-	border-width: 0 0 1px 0;
+  border: 2px solid #3456F3;
+  border-width: 0 0 2px 0;
   outline: none;
 }
 

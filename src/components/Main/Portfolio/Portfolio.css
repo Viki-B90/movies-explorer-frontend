@@ -45,9 +45,7 @@
   margin: 0;
   border: 1px solid #A0A0A0;
   border-width: 0 0 1px 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  list-style-type: none;
   margin-bottom: 20px;
 }
 
@@ -57,6 +55,9 @@
 }
 
 .portfolio__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 0;
   text-decoration: none;
   color: #000000;
@@ -74,7 +75,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
   .portfolio__link {
     font-size: 18px;
     line-height: 28px;

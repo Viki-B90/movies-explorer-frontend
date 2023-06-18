@@ -21,8 +21,8 @@ const MoviesCardList = () => {
         return windowSize;
   }
   return (
-    <section className="movies-cards">
-      <ul className="movies-list">
+    <section className="cards">
+      <ul className="cards__list">
         {size > 880 &&
         (initialMovies.slice(0,7).map(movie => {
           return (

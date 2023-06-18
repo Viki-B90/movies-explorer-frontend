@@ -113,33 +113,33 @@
   flex-direction: column;
 }
 
-.project__column_green {
+.project__column_color_green {
   width: 20%;
 }
 
 @media (max-width: 768px) {
-  .project__column_green {
+  .project__column_color_green {
     width: 144px;
   }
 }
 
 @media (max-width: 500px) {
-  .project__column_green {
+  .project__column_color_green {
     width: 35%;
   }
 }
 
-.project__column_front {
+.project__column_color_white {
   width: 80%;
 }
 
 @media (max-width: 500px) {
-  .project__column_front {
+  .project__column_color_white {
     width: 65%;
   }
 }
 
-.project__progressbar_green {
+.project__progressbar-green {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -152,14 +152,14 @@
 }
 
 @media (max-width: 500px) {
-  .project__progressbar_green {
+  .project__progressbar-green {
     padding: 11px 0 11px 0;
     font-size: 11px;
     line-height: 13px;
   }
 }
 
-.project__progressbar_white {
+.project__progressbar-white {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
@@ -172,14 +172,14 @@
 }
 
 @media (max-width: 500px) {
-  .project__progressbar_white {
+  .project__progressbar-white {
     padding: 11px 0 11px 0;
     font-size: 11px;
     line-height: 13px;
   }
 }
 
-.project__progressbar_text {
+.project__progressbar-text {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -191,7 +191,7 @@
 }
 
 @media (max-width: 500px) {
-  .project__progressbar_text {
+  .project__progressbar-text {
       margin-top: 10px;
       font-size: 11px;
       line-height: 13px;

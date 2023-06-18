@@ -237,7 +237,7 @@
     width: 520px;
     top: 0px;
     right: 0px;
-    position: absolute;
+    position: fixed;
     opacity: 1;
     visibility: visible;
     transition: all 0.25s ease;
@@ -254,18 +254,11 @@
 
 .header__sidebar {
   width: 100%;
-  height: 1024px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background: #FFFFFF;
-}
-
-@media (max-width: 350px) {
-  .header__sidebar {
-    height: 780px;
-  }
 }
 
 .header__sidebar-links {

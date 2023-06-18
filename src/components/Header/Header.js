@@ -16,7 +16,7 @@ function Header(props) {
   return (
     <>
       <header className="header">
-        <div className={activeButtonClassName}>
+        <section className={activeButtonClassName}>
           <button className="header__close" onClick={handleActiveClick}></button>
           <div className="header__sidebar">
             <div className="header__sidebar-links">
@@ -29,29 +29,29 @@ function Header(props) {
               <img src={img} alt="Аккаунт" className="header__sidebar-img" />
             </div>
           </div>
-        </div>
+        </section>
         {props.location === "/" && (
-          <div className="header__links">
+          <section className="header__links">
             <Link to="/"><img src={logo} alt="Логотип" className="header__logo" /></Link>
             <div className="header__button">
               <Link to="/signup"><button className="header__button_signup">Регистрация</button></Link>
               <Link to="/signin"><button className="header__button_signin">Войти</button></Link>
             </div>
-          </div>
+          </section>
         )}
         {(props.location === "/movies" || props.location === "/saved-movies" || props.location === "/profile") && (
-          <div className="header__links">
+          <section className="header__links">
             <Link to="/"><img src={logo} alt="Логотип" className="header__logo" /></Link>
-              <div>
-                <Link to="/movies" className="header__link-movies">Фильмы</Link>
-                <Link to="/saved-movies" className="header__link-saved">Сохранённые фильмы</Link>
-              </div>
-                <div className="header__link-profile">
-                  <Link to="/profile" ><button className="header__button_profile">Аккаунт</button></Link>
-                  <img src={img} alt="Аккаунт" className="header__img" />
-                  <button className="header__burger" onClick={handleActiveClick}></button>
-                </div>
-          </div>
+            <div className='header__link'>
+              <Link to="/movies" className="header__link-movies">Фильмы</Link>
+              <Link to="/saved-movies" className="header__link-saved">Сохранённые фильмы</Link>
+            </div>
+            <div className="header__link-profile">
+              <Link to="/profile" ><button className="header__button_profile">Аккаунт</button></Link>
+              <img src={img} alt="Аккаунт" className="header__img" />
+              <button className="header__burger" onClick={handleActiveClick}></button>
+            </div>
+          </section>
         )}
       </header>
     </>

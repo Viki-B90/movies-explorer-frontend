@@ -6,14 +6,14 @@ const MoreMoviesCard = (props) => {
   return (
     <>
       { props.location === "/movies" && (
-      <section className="more-movies">
-        <button className="more-movies__button">Ещё</button>
+      <section className="moremovies">
+        <button className="moremovies__button">Ещё</button>
       </section>
       )
       }
       { props.location === "/saved-movies" && (
-      <section className="more-movies">
-        <div className="more-movies__container"></div>
+      <section className="moremovies">
+        <div className="moremovies__container"></div>
       </section>
       )
       }

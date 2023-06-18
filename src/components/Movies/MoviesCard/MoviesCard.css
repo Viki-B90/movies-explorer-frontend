@@ -1,31 +1,31 @@
-.card {
+.elements {
   background: #F9F9F9;
 }
 
-.elements-grid__item {
+.elements__item {
   position: relative;
   display: flex;
   justify-content: space-between;
 }
 
 @media (max-width: 450px) {
-  .elements-grid__item {
+  .elements__item {
     flex-direction: column-reverse;
   }
 }
 
-.elements-grid__text {
+.elements__text {
   margin-left: 20px;
 }
 
 @media (max-width: 450px) {
-  .elements-grid__text {
+  .elements__text {
     height: 64px;
     margin-left: 13px;
   }
 }
 
-.elements-grid__title {
+.elements__title {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 500;
@@ -37,8 +37,8 @@
   margin-bottom: 9px;
 }
 
-@media (max-width: 450px) {
-  .elements-grid__title {
+@media (max-width: 500px) {
+  .elements__title {
     font-size: 12px;
     line-height: 15px;
     margin-top: 14px;
@@ -46,14 +46,14 @@
   }
 }
 
-.elements-grid__time {
+.elements__time {
   font-weight: 400;
   font-size: 11px;
   line-height: 13px;
   color: #A0A0A0;
 }
 
-.elements-grid__like {
+.elements__like {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -69,14 +69,14 @@
 }
 
 @media (max-width: 450px) {
-  .elements-grid__like {
+  .elements__like {
     position: absolute;
     top: 156px;
     right: 17px;
   }
 }
 
-.elements-grid__like_active {
+.elements__like_active {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -92,14 +92,14 @@
 }
 
 @media (max-width: 450px) {
-  .elements-grid__like_active {
+  .elements__like_active {
     position: absolute;
     top: 156px;
     right: 17px;
   }
 }
 
-.elements-grid__like_delete {
+.elements__like_delete {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -115,32 +115,32 @@
 }
 
 @media (max-width: 450px) {
-  .elements-grid__like_delete {
+  .elements__like_delete {
     position: absolute;
     top: 156px;
     right: 17px;
   }
 }
 
-.elements-grid__img-container {
+.elements__img-container {
   height: 134px;
 }
 
 @media (max-width: 450px) {
-  .elements-grid__img-container {
+  .elements__img-container {
     height: 168px;
     margin: 0 auto;
   }
 }
 
-.elements-grid__image {
+.elements__image {
   width: 220px;
   height: 122px;
   margin: 6px 6px 6px 0;
 }
 
 @media (max-width: 450px) {
-  .elements-grid__image {
+  .elements__image {
     height: 168px;
     width: 300px;
     margin: 0;

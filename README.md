@@ -10,5 +10,5 @@ Frontend приложение:
 ## Ссылки:
 - Ссылка на макет: https://disk.yandex.ru/d/-shP-KH0vvPucQ
 
-## Вопрос:
+## P.S.:
 не могу отключить ошибку eslint, работает только при условии в документе /* eslint-disable react/prop-types */, в правилах .eslintrc не срабатывает
