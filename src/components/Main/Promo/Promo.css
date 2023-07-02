@@ -91,3 +91,7 @@
     margin-right: 12px;
   }
 }
+
+.promo__link:hover {
+  color: #169e55;
+}

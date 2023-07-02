@@ -35,15 +35,41 @@
   margin: 0;
   margin-top: 22px;
   margin-bottom: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 450px;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .elements__title {
     font-size: 12px;
     line-height: 15px;
     margin-top: 14px;
     margin-bottom: 4px;
   }
+}
+
+@media (max-width: 560px) {
+  .elements__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 450px) {
+  .elements__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+  }
+}
+
+.elements__title:hover {
+  overflow: visible;
 }
 
 .elements__time {
@@ -54,10 +80,9 @@
 }
 
 .elements__like {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 28px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
   width: 14px;
   height: 12px;
   border: none;
@@ -71,16 +96,15 @@
 @media (max-width: 450px) {
   .elements__like {
     position: absolute;
-    top: 156px;
-    right: 17px;
+    top: 184px;
+    left: 270px;
   }
 }
 
 .elements__like_active {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 28px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
   width: 14px;
   height: 12px;
   border: none;
@@ -94,16 +118,15 @@
 @media (max-width: 450px) {
   .elements__like_active {
     position: absolute;
-    top: 156px;
-    right: 17px;
+    top: 184px;
+    left: 270px;
   }
 }
 
 .elements__like_delete {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-top: 28px;
+  position: absolute;
+  top: 100px;
+  left: 20px;
   width: 12px;
   height: 10px;
   border: none;
@@ -117,8 +140,8 @@
 @media (max-width: 450px) {
   .elements__like_delete {
     position: absolute;
-    top: 156px;
-    right: 17px;
+    top: 184px;
+    left: 270px;
   }
 }
 

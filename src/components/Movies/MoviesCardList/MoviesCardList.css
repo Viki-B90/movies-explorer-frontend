@@ -23,6 +23,13 @@
   margin: 0;
 }
 
+@media (max-width: 600px) {
+  .cards__list {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+}
+
 @media (max-width: 450px) {
   .cards__list {
     display: grid;
@@ -31,4 +38,17 @@
     row-gap: 20px;
     justify-content: center;
   }
+}
+
+.cards__error {
+  display: none;
+}
+
+.cards__error_active {
+  text-align: center;
+  color: #FF3055;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
 }

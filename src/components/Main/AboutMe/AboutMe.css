@@ -19,7 +19,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-    height: 327px;
+  height: 327px;
 }
 
 @media (max-width: 900px) {
@@ -139,19 +139,19 @@
   }
 }
 
-.myself__links {
+.myself__link {
   margin: 0;
   display: flex;
   justify-content: flex-start;
 }
 
 @media (max-width: 768px) {
-  .myself__links {
+  .myself__link {
     margin-top: 25px;
   }
 }
 
-.myself__link {
+.myself__link-git {
   margin-right: 20px;
   text-decoration: none;
   color: #000000;
@@ -161,13 +161,13 @@
 }
 
 @media (max-width: 600px) {
-  .myself__link {
+  .myself__link-git {
     margin-right: 20px;
   }
 }
 
-.myself__link:last-child {
-  margin-right: 0px;
+.myself__link-git:hover {
+  color: #169e55;
 }
 
 .myself__photo {

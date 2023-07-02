@@ -5,7 +5,6 @@ import promo from '../../../images/landing-logo.svg';
 
 function Promo() {
   return (
-    <>
     <section className="promo">
       <Header location={"/"}/>
       <h1 className="promo__header">Учебный проект студента факультета Веб-разработки.</h1>
@@ -15,8 +14,7 @@ function Promo() {
         <a href="#techs" className="promo__link">Технологии</a>
         <a href="#student" className="promo__link">Студент</a>
       </nav>
-      </section>
-    </>
+    </section>
   )
 }
 

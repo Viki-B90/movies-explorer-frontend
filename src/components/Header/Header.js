@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../images/logo.svg';
@@ -20,13 +19,16 @@ function Header(props) {
           <button className="header__close" onClick={handleActiveClick}></button>
           <div className="header__sidebar">
             <div className="header__sidebar-links">
-              <p className="header__sidebar-main">Главная</p>
+              <Link to="/" className="header__sidebar-main">Главная</Link>
               <Link to="/movies" className="header__sidebar-movies">Фильмы</Link>
               <Link to="/saved-movies" className="header__sidebar-saved">Сохранённые фильмы</Link>
             </div>
             <div className="header__sidebar-profile">
-              <Link to="/profile" ><button className="header__sidebar-button">Аккаунт</button></Link>
-              <img src={img} alt="Аккаунт" className="header__sidebar-img" />
+              <Link to="/profile" >
+                <button className="header__sidebar-button">Аккаунт
+                  <img src={img} alt="Аккаунт" className="header__sidebar-img" />
+                </button>
+              </Link>
             </div>
           </div>
         </section>
@@ -47,8 +49,11 @@ function Header(props) {
               <Link to="/saved-movies" className="header__link-saved">Сохранённые фильмы</Link>
             </div>
             <div className="header__link-profile">
-              <Link to="/profile" ><button className="header__button_profile">Аккаунт</button></Link>
-              <img src={img} alt="Аккаунт" className="header__img" />
+              <Link to="/profile" >
+                <button className="header__button_profile">Аккаунт
+                  <img src={img} alt="Аккаунт" className="header__img" />
+                </button>
+              </Link>
               <button className="header__burger" onClick={handleActiveClick}></button>
             </div>
           </section>

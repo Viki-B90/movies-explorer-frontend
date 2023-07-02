@@ -1,67 +1,36 @@
-/* eslint-disable react/jsx-key */
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { initialMovies } from '../../../utils/array'
 import MoviesCard from '../MoviesCard/MoviesCard';
+import Preloader from '../Preloader/Preloader';
+import MoreMoviesCard from '../MoreMoviesCard/MoreMoviesCard';
 import './MoviesCardList.css'
 
-const MoviesCardList = () => {
-  const size = useWindowSize();
+const MoviesCardList = (props) => {
+  const classError = `cards__error${props.error ? '_active' : ''}`
 
-  function useWindowSize() {
-        const [windowSize, setWindowSize] = useState(undefined);
-        useEffect(() => {
-          function handleResize() {
-            setWindowSize(window.innerWidth);
-          }
-          window.addEventListener("resize", handleResize);
-          handleResize();
-          return () => window.removeEventListener("resize", handleResize);
-        }, []);
-        return windowSize;
-  }
   return (
     <section className="cards">
+      <Preloader load={props.load} />
+      <p className={classError}>Ничего не найдено</p>
       <ul className="cards__list">
-        {size > 880 &&
-        (initialMovies.slice(0,7).map(movie => {
+        {props.cards.slice(0, props.limit).map(movie => {
           return (
             <MoviesCard
-              movieName={movie.name}
-              movieLink={movie.link.img}
-              movieTime={movie.time}
+              key={movie.id}
+              movieName={movie.nameRU}
+              movieLink={movie.image.url}
+              movieImg={movie.image}
+              movieTime={movie.duration}
               movie={movie}
-              movieLiked={movie.like}
+              movieVideo={movie.trailerLink}
+              onLikedClick={props.onLikedClick}
+              liked={props.liked}
+              location={props.location}
+              onDeleteClick={props.onDeleteClick}
             />
           )
-        }))}
-        { size > 600 && size <= 880 && (
-          initialMovies.slice(0,7).map(movie => {
-            return (
-              <MoviesCard
-                movieName={movie.name}
-                movieLink={movie.link.img}
-                movieTime={movie.time}
-                movie={movie}
-                movieLiked={movie.like}
-              />
-            )
-          })
-        )}
-        { size <= 600  && (
-          initialMovies.slice(0,5).map(movie => {
-            return (
-              <MoviesCard
-                movieName={movie.name}
-                movieLink={movie.link.img}
-                movieTime={movie.time}
-                movie={movie}
-                movieLiked={movie.like}
-              />
-            )
-          })
-        )}
+        })}
       </ul>
+      <MoreMoviesCard location={props.location} loadMore={props.loadMore} onClick={props.onClick} />
     </section>
   )
 };

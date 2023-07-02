@@ -16,6 +16,12 @@
   }
 }
 
+.moremovies_active {
+  display: none;
+  text-align: center;
+  margin-top: 60px;
+}
+
 .moremovies__button {
   font-weight: 500;
   font-size: 12px;
@@ -33,6 +39,10 @@
   .moremovies__button {
     width: 240px;
   }
+}
+
+.moremovies__button:hover {
+  background: #E8E8E8;
 }
 
 .moremovies__container{

@@ -9,6 +9,9 @@ Frontend приложение:
 
 ## Ссылки:
 - Ссылка на макет: https://disk.yandex.ru/d/-shP-KH0vvPucQ
+- Ссылка на приложение: https://movies.viki.b.nomoredomains.rocks
+- Cсылка на пул-реквест: https://github.com/Viki-B90/movies-explorer-frontend/pull/1
 
 ## P.S.:
-не могу отключить ошибку eslint, работает только при условии в документе /* eslint-disable react/prop-types */, в правилах .eslintrc не срабатывает
+Реализованы эффекты наведения кнопок и ссылок на свое усмотрение, так как в макете эти данные не указаны.
+

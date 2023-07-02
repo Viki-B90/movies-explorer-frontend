@@ -1,13 +1,14 @@
-/* eslint-disable react/prop-types */
 import React from 'react'
 import './MoreMoviesCard.css'
 
 const MoreMoviesCard = (props) => {
+  const moreMovies = `moremovies${props.loadMore ? '_active' : ''}`
+
   return (
     <>
       { props.location === "/movies" && (
-      <section className="moremovies">
-        <button className="moremovies__button">Ещё</button>
+      <section className={moreMovies}>
+        <button className="moremovies__button" onClick={props.onClick}>Ещё</button>
       </section>
       )
       }

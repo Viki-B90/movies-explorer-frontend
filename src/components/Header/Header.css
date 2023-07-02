@@ -66,6 +66,10 @@
   }
 }
 
+.header__button_signup:hover {
+  color: #169e55;
+}
+
 .header__button_signin {
   background: #2BE080;
   border-radius: 3px;
@@ -84,6 +88,10 @@
     line-height: 16px;
     padding: 5px 12px;
   }
+}
+
+.header__button_signin:hover {
+  background: #169e55;
 }
 
 .header__links {
@@ -110,6 +118,10 @@
   }
 }
 
+.header__link-movies:hover {
+  color: #169e55;
+}
+
 .header__link-saved {
   font-family: 'Inter';
   font-weight: 400;
@@ -125,6 +137,10 @@
   }
 }
 
+.header__link-saved:hover {
+  color: #169e55;
+}
+
 .header__link-profile {
   position: relative;
 }
@@ -137,7 +153,7 @@
   line-height: 16px;
   color: #000000;
   border: none;
-  padding: 7px 43px 7px 0;
+  padding: 7px 46px 7px 3px;
   vertical-align: top;
   background: white;
   cursor: pointer;
@@ -147,6 +163,11 @@
   .header__button_profile {
     display: none;
   }
+}
+
+.header__button_profile:hover {
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #97f9c5;
 }
 
 .header__img {
@@ -276,6 +297,7 @@
   color: #000000;
   margin-bottom: 28px;
   margin-top: 159px;
+  text-decoration: none;
 }
 
 @media (max-width: 350px) {
@@ -285,6 +307,14 @@
   }
 }
 
+.header__sidebar-main:hover {
+  border: 2px solid #000000;
+  border-width: 0 0 2px 0;
+  padding-bottom: 4px;
+  color: #169e55;
+  margin-bottom: 22px;
+}
+
 .header__sidebar-movies {
   font-family: 'Inter';
   font-weight: 500;
@@ -292,9 +322,6 @@
   line-height: 22px;
   text-align: center;
   color: #000000;
-  border: 2px solid #000000;
-  border-width: 0 0 2px 0;
-  padding-bottom: 4px;
   margin-bottom: 22px;
   text-decoration: none;
   width: 72px;
@@ -307,6 +334,14 @@
   }
 }
 
+.header__sidebar-movies:hover {
+  border: 2px solid #000000;
+  border-width: 0 0 2px 0;
+  padding-bottom: 4px;
+  color: #169e55;
+  margin-bottom: 16px;
+}
+
 .header__sidebar-saved {
   text-decoration: none;
   font-family: 'Inter';
@@ -315,6 +350,13 @@
   line-height: 22px;
   text-align: center;
   color: #000000;
+}
+
+.header__sidebar-saved:hover {
+  border: 2px solid #000000;
+  border-width: 0 0 2px 0;
+  padding-bottom: 4px;
+  color: #169e55;
 }
 
 .header__sidebar-profile {
@@ -337,10 +379,15 @@
   line-height: 16px;
   color: #000000;
   border: none;
-  padding: 7px 43px 7px 0;
+  padding: 7px 46px 7px 3px;
   vertical-align: top;
-  background: white;
+  background: #FFFFFF;
   cursor: pointer;
+}
+
+.header__sidebar-button:hover {
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px #97f9c5;
 }
 
 .header__sidebar-img {

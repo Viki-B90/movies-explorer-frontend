@@ -117,6 +117,18 @@
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
+  color: #A0A0A0;
+  border: none;
+  background: none;
+  margin-top: 2px;
+  margin-bottom: 14px;
+  letter-spacing: 0.04em;
+}
+
+.profile__edit_active {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
   color: #000000;
   border: none;
   background: none;
@@ -124,6 +136,10 @@
   margin-top: 2px;
   margin-bottom: 14px;
   letter-spacing: 0.04em;
+}
+
+.profile__edit_active:hover {
+  opacity: .7;
 }
 
 @media (max-width: 320px) {
@@ -144,9 +160,25 @@
   cursor: pointer;
 }
 
+.profile__exit:hover {
+  opacity: .7;
+}
+
 @media (max-width: 320px) {
   .profile__exit {
     font-size: 12px;
     line-height: 15px;
   }
+}
+
+.profile__info{
+  display: none;
+}
+
+.profile__info_active{
+  font-family: 'Inter';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #FF3055;
 }

@@ -18,8 +18,8 @@ function AboutMe() {
 						После того, как закончу курс по веб-разработке, продолжу развивать навыки по написанию кода и начну искать работу web-разработчиком.
 						</p>
           </div>
-          <div className="myself__links">
-            <a href="https://github.com/Viki-B90" target="_blank" className="myself__link" rel="noreferrer">Github</a>
+          <div className="myself__link">
+            <a href="https://github.com/Viki-B90" target="_blank" className="myself__link-git" rel="noreferrer">Github</a>
           </div>
         </div>
         <img src={photo} alt="Фотография" className="myself__photo" />

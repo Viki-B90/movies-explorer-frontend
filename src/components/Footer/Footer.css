@@ -88,6 +88,10 @@
   }
 }
 
+.footer__link:hover {
+  color: #169e55;
+}
+
 .footer__link:last-child {
   margin-right: 0px;
 }
