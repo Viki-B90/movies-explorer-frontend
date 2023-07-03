@@ -15,8 +15,7 @@ class Api {
   register = (name, email, password) => {
     return fetch(`${this._url}/signup`, {
       method: 'POST',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -31,8 +30,7 @@ class Api {
   authorize = (email, password) => {
     return fetch(`${this._url}/signin`, {
       method: 'POST',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -46,8 +44,7 @@ class Api {
   checkToken = (token) => {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -62,8 +59,7 @@ class Api {
   getUserInfo(token) {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -76,8 +72,7 @@ class Api {
   editUserInfo(user, token) {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -94,8 +89,7 @@ class Api {
   addMovie(movies, token) {
     return fetch(`${this._url}/movies`, {
       method: 'POST',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -122,8 +116,7 @@ class Api {
   removeMovie(_id, token) {
     return fetch(`${this._url}/movies/${_id}`, {
       method: 'DELETE',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -136,8 +129,7 @@ class Api {
   getAllSavedMovies(token) {
     return fetch(`${this._url}/movies`, {
       method: 'GET',
-      //credentials: 'include',
-      mode: 'no-cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
