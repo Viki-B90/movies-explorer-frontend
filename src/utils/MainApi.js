@@ -16,6 +16,7 @@ class Api {
     return fetch(`${this._url}/signup`, {
       method: 'POST',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -31,6 +32,7 @@ class Api {
     return fetch(`${this._url}/signin`, {
       method: 'POST',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -45,6 +47,7 @@ class Api {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
@@ -60,6 +63,7 @@ class Api {
     return fetch(`${this._url}/users/me`, {
       method: 'GET',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -73,6 +77,7 @@ class Api {
     return fetch(`${this._url}/users/me`, {
       method: 'PATCH',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -90,6 +95,7 @@ class Api {
     return fetch(`${this._url}/movies`, {
       method: 'POST',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -117,6 +123,7 @@ class Api {
     return fetch(`${this._url}/movies/${_id}`, {
       method: 'DELETE',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
@@ -130,6 +137,7 @@ class Api {
     return fetch(`${this._url}/movies`, {
       method: 'GET',
       //credentials: 'include',
+      mode: 'no-cors',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}`,
