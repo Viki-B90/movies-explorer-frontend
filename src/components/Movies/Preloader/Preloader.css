@@ -49,10 +49,6 @@
   padding: 20px;
 }
 
-.preloader_loaded {
-  display: none;
-}
-
 .preloader__container {
   width: 100px;
   height: 100px;
@@ -90,3 +86,8 @@
   background: #FF6838;
   animation: preloader-inside-red 1s ease-in-out infinite;
 }
+
+.preloader_loaded {
+  display: none;
+}
+

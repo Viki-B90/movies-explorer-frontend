@@ -92,7 +92,7 @@
 
 .myself__profile {
   margin: 0;
-  margin-top: 18px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 18px;
   line-height: 20px;
@@ -117,7 +117,7 @@
 
 .myself__about {
   margin: 0;
-  margin-top: 26px;
+  margin-bottom: 60px;
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
@@ -128,7 +128,8 @@
   .myself__about {
     font-size: 12px;
     line-height: 18px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
   }
 }
 
@@ -136,6 +137,7 @@
   .myself__about {
     font-size: 11px;
     line-height: 16px;
+    margin-bottom: 10px;
   }
 }
 
@@ -147,7 +149,7 @@
 
 @media (max-width: 768px) {
   .myself__link {
-    margin-top: 25px;
+    margin-top: 0px;
   }
 }
 

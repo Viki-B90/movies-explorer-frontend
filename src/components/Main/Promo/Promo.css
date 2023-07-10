@@ -2,6 +2,7 @@
   background-color: #073042;
   margin: 0;
   position: relative;
+  text-align: center;
 }
 
 .promo__header {
@@ -13,7 +14,7 @@
   letter-spacing: -0.04em;
   color: #FFFFFF;
   position: absolute;
-  top: 225px;
+  top: 145px;
   left: 50%;
   text-align: center;
   width: 680px;
@@ -24,7 +25,7 @@
 @media (max-width: 768px) {
   .promo__header {
     position: absolute;
-    top: 370px;
+    top: 290px;
     left: 50%;
     text-align: center;
   }
@@ -44,13 +45,13 @@
     line-height: 39px;
     width: 300px;
     max-width: 100%;
-    top: 262px;
+    top: 182px;
   }
 }
 
 .promo__logo {
   margin: 82px auto 122px;
-  display: block;
+  display: inline;
 }
 
 @media (max-width: 768px) {

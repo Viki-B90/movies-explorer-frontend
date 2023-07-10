@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Header/Header';
+import MoviesHeader from '../Header/MoviesHeader/MoviesHeader';
 import './Profile.css';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
@@ -48,34 +49,38 @@ function Profile(props) {
   }, [currentUser]);
 
   return (
-    <section className="profile">
-      <Header location={"/profile"}/>
-      <div className="profile__container">
-        <h6 className="profile__header">Привет, {currentUser.name}!</h6>
-        <form className="profile__form">
-          <div className="profile__input">
-            <span className="profile__placeholder">Имя</span>
-            <input className="profile__text" value={`${name}`} onChange={handleChangeName} />
+    <>
+      <Header location={"/profile"}>
+        <MoviesHeader />
+      </Header>
+      <section className="profile">
+        <div className="profile__container">
+          <h6 className="profile__header">Привет, {currentUser.name}!</h6>
+          <form className="profile__form">
+            <div className="profile__input">
+              <span className="profile__placeholder">Имя</span>
+              <input className="profile__text" value={`${name}`} onChange={handleChangeName} />
+            </div>
+            <div className="profile__input">
+              <span className="profile__placeholder">E-mail</span>
+              <input className="profile__text" value={`${email}`} onChange={handleChangeEmail} />
+            </div>
+          </form>
+          {props.onInfoTooltip
+            ? (
+              <p className={activeInfoClassName}>Вы успешно изменили данные профиля!</p>
+            )
+            : (
+              <p className={activeInfoClassName}>Что-то пошло не так... Попробуйте ещё раз.</p>
+            )
+          }
+          <div className="profile__button">
+            <button disabled={disabled} className={activeButtonClassName} onClick={handleSubmit}>Редактировать</button>
+            <button className='profile__exit' onClick={props.onLogout}>Выйти из аккаунта</button>
           </div>
-          <div className="profile__input">
-            <span className="profile__placeholder">E-mail</span>
-            <input className="profile__text" value={`${email}`} onChange={handleChangeEmail} />
-          </div>
-        </form>
-        {props.onInfoTooltip
-          ? (
-            <p className={activeInfoClassName}>Вы успешно изменили данные профиля!</p>
-          )
-          : (
-            <p className={activeInfoClassName}>Что-то пошло не так... Попробуйте ещё раз.</p>
-          )
-        }
-        <div className="profile__button">
-          <button disabled={disabled} className={activeButtonClassName} onClick={handleSubmit}>Редактировать</button>
-          <button className='profile__exit' onClick={props.onLogout}>Выйти из аккаунта</button>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   )
 }
 

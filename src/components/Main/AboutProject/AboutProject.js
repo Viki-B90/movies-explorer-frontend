@@ -6,7 +6,7 @@ function AboutProject() {
   return (
     <section id="project" className="project">
       <Caption name={"О проекте"} />
-      <div className="project__info">
+      <section className="project__info">
         <div className="project__paragraph">
           <p className="project__header">Дипломный проект включал 5 этапов</p>
           <p className="project__text">Составление плана, работу над бэкендом, вёрстку, добавление функциональности и финальные доработки.</p>
@@ -15,8 +15,8 @@ function AboutProject() {
           <p className="project__header">На выполнение диплома ушло 5 недель</p>
           <p className="project__text">У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
         </div>
-      </div>
-      <div className="project__progressbar">
+      </section>
+      <section className="project__progressbar">
         <div className="project__column project__column_color_green">
           <span className="project__progressbar-green">1 неделя</span>
           <span className="project__progressbar-text">Back-end</span>
@@ -25,7 +25,7 @@ function AboutProject() {
           <span className="project__progressbar-white">4 недели</span>
           <span className="project__progressbar-text">Front-end</span>
         </div>
-      </div>
+      </section>
     </section>
   )
 }

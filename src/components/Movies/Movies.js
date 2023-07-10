@@ -1,4 +1,6 @@
 import React from 'react';
+import Header from '../Header/Header';
+import MainMovies from '../Header/MoviesHeader/MoviesHeader';
 import SearchForm from './SearchForm/SearchForm';
 import MoviesCardList from './MoviesCardList/MoviesCardList';
 import './Movies.css';
@@ -7,6 +9,9 @@ import Footer from '../Footer/Footer';
 function Movies(props) {
   return (
     <>
+      <Header location={"/movies"}>
+        <MainMovies />
+      </Header>
       <section className="movies">
         <SearchForm
           onSubmit={props.onSubmit}
@@ -18,6 +23,7 @@ function Movies(props) {
           errorInput={props.errorInput}
         />
         <MoviesCardList
+          load={props.load}
           liked={props.liked}
           onLikedClick={props.onLikedClick}
           location={'/movies'}
@@ -26,7 +32,6 @@ function Movies(props) {
           error={props.error}
           limit={props.limit}
           onClick={props.onClick}
-          load={props.load}
         />
         <Footer />
       </section>

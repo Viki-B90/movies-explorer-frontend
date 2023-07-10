@@ -7,15 +7,15 @@ const MoreMoviesCard = (props) => {
   return (
     <>
       { props.location === "/movies" && (
-      <section className={moreMovies}>
-        <button className="moremovies__button" onClick={props.onClick}>Ещё</button>
-      </section>
+        <section className={moreMovies}>
+          <button className="moremovies__button" onClick={props.onClick}>Ещё</button>
+        </section>
       )
       }
       { props.location === "/saved-movies" && (
-      <section className="moremovies">
-        <div className="moremovies__container"></div>
-      </section>
+        <section className="moremovies">
+          <div className="moremovies__container"></div>
+        </section>
       )
       }
     </>

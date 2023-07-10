@@ -9,18 +9,16 @@ function AboutMe() {
       <Caption name={"Студент"} />
       <div className="myself__info">
         <div className="myself__text">
-          <div className="myself__description">
-            <h4 className="myself__name">Виктория</h4>
-            <p className="myself__profile">Фронтенд-разработчик, 32 года</p>
-            <p className="myself__about">
-							Я родилась в Ростовской области, последние 10 лет живу в Ростове-на-Дону, закончила экономический факультет ЮРГУЭС.
+          <h4 className="myself__name">Виктория</h4>
+          <p className="myself__profile">Фронтенд-разработчик, 32 года</p>
+          <p className="myself__about">
+						Я родилась в Ростовской области, последние 10 лет живу в Ростове-на-Дону, закончила экономический факультет ЮРГУЭС.
 						У меня есть муж и дочь. Я люблю слушать музыку, а ещё увлекаюсь спортом. Работаю менеджером B2C. Недавно начала кодить.
 						После того, как закончу курс по веб-разработке, продолжу развивать навыки по написанию кода и начну искать работу web-разработчиком.
-						</p>
-          </div>
-          <div className="myself__link">
+					</p>
+          <nav className="myself__link">
             <a href="https://github.com/Viki-B90" target="_blank" className="myself__link-git" rel="noreferrer">Github</a>
-          </div>
+          </nav>
         </div>
         <img src={photo} alt="Фотография" className="myself__photo" />
       </div>

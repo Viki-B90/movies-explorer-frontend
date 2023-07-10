@@ -10,6 +10,7 @@ import Login from '../Login/Login';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import { CurrentUserContext } from '../../contexts/CurrentUserContext.js';
+import { MOVIES_CHECKED, WINDOW_SIZE, CARDS_RENDER_DESKTOP, CARDS_RENDER_MOBILE } from '../../utils/constants';
 import apiMovies from '../../utils/MoviesApi.js';
 import api from '../../utils/MainApi.js';
 
@@ -38,10 +39,10 @@ function App() {
   const jwt = localStorage.getItem('jwt');
   const PAGE_WITHOUT_AUTH = ['/signin', '/signup'];
 
-  document.body.onload = function () {
+  window.onload = function () {
     setTimeout (function() {
       setLoad(true);
-    }, 1000);
+    }, 2000);
   }
 
   useEffect(() => {
@@ -155,13 +156,10 @@ function App() {
     useEffect(() => {
       function handleResize() {
         setWindowSize(window.innerWidth);
-        if (window.innerWidth > 880) {
-          setLimit(7)
-        } else {
-          if (window.innerWidth > 600 && window.innerWidth <= 880) {
-            setLimit(7)
-          } else setLimit(5)
-        }
+        if (window.innerWidth > WINDOW_SIZE) {
+          setLimit(CARDS_RENDER_DESKTOP)
+        } else setLimit(CARDS_RENDER_MOBILE)
+
       }
       window.addEventListener("resize", handleResize);
       handleResize();
@@ -172,16 +170,16 @@ function App() {
 
   //загружаем больше карточек
   function addMoreMovies() {
-      if (size > 880) {
-        setLimit((prevLimit) => prevLimit + 7);
-        if (limit + 7 < cards.length) {
+      if (size > WINDOW_SIZE) {
+        setLimit((prevLimit) => prevLimit + CARDS_RENDER_DESKTOP);
+        if (limit + CARDS_RENDER_DESKTOP < cards.length) {
           setLoadMore(false);
       } else {
         setLoadMore(true);
       }
       } else {
-        setLimit((prevLimit) => prevLimit + 5);
-        if (limit + 5 < cards.length) {
+        setLimit((prevLimit) => prevLimit + CARDS_RENDER_MOBILE);
+        if (limit + CARDS_RENDER_MOBILE < cards.length) {
           setLoadMore(false);
       } else {
         setLoadMore(true);
@@ -222,7 +220,7 @@ function App() {
       })
       .catch((err) => {
         console.log(err);
-        setError('Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз');
+        setError('Во время запроса произошла ошибка.Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз');
       })
   }
 
@@ -268,7 +266,7 @@ function App() {
   }, []);
 
   React.useEffect(() => {
-    const moviesChecked = cards.filter(card => card.duration <= 40)
+    const moviesChecked = cards.filter(card => card.duration <= MOVIES_CHECKED)
     setShortMovie(moviesChecked)
   }, [cards, setChecked]);
 
@@ -305,7 +303,7 @@ function App() {
   }
 
   React.useEffect(() => {
-    setShortSavedMovie(savedCards.filter(card => card.duration <= 40))
+    setShortSavedMovie(savedCards.filter(card => card.duration <= MOVIES_CHECKED))
   }, [savedCards, setCheckedSaved]);
 
   function handleCheckedClickSaved() {
@@ -417,10 +415,11 @@ function App() {
       <section className="app">
         <div className="app__container">
           <Routes>
-            <Route exact path="/" element={<Main />} />
+            <Route exact path="/" element={<Main loggedIn={loggedIn} />} />
             <Route exact path="/movies" element={
               <ProtectedRoute loggedIn={loggedIn}>
                 <Movies
+                  load={load}
                   onChange={handleChange}
                   error={error}
                   form={form}
@@ -432,7 +431,6 @@ function App() {
                   onClick={addMoreMovies}
                   limit={limit}
                   onLikedClick={handleAddMovie}
-                  load={load}
                   errorInput={errorInput}
                 />
               </ProtectedRoute>}
@@ -440,6 +438,7 @@ function App() {
             <Route exact path="/saved-movies" element={
               <ProtectedRoute loggedIn={loggedIn}>
               <SavedMovies
+                load={load}
                 cards={checkedSaved ? shortSavedMovie : savedCards}
                 limit={limit}
                 error={error}
@@ -449,7 +448,6 @@ function App() {
                 onInputClick={handleCheckedClickSaved}
                 onSubmit={handleSubmitSavedMovies}
                 onDeleteClick={handleDeleteMovie}
-                load={load}
                 errorInput={errorInputSaved}
               />
               </ProtectedRoute>}

@@ -24,14 +24,14 @@
   width: 34px;
   height: 34px;
   position: absolute;
-  top: 146px;
+  top: 66px;
   left: 76px;
   z-index: 2;
 }
 
 @media (max-width: 768px) {
   .form__zoom {
-    top: 160px;
+    top: 80px;
     left: 36px;
   }
 }
@@ -43,7 +43,7 @@
 }
 
 .form__input {
-  margin: 56px auto 30px;
+  margin: 56px auto 10px;
   border: none;
   height: 60px;
   padding: 0;
@@ -94,7 +94,7 @@
   position: absolute;
   z-index: 3;
   right: 63px;
-  top: 146px;
+  top: 66px;
   cursor: pointer;
 }
 
@@ -105,13 +105,13 @@
 @media (max-width: 768px) {
   .form__button {
     right: 24px;
-    top: 160px;
+    top: 80px;
   }
 }
 
 @media (max-width: 320px) {
   .form__button {
-    top: 165px;
+    top: 85px;
     right: 9px;
   }
 }
@@ -140,6 +140,7 @@
 }
 
 .checkbox .checkbox__input {
+  display: block;
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -147,11 +148,11 @@
   width: 0;
 }
 
-.checkbox .checkbox__input:checked ~ .checkbox__checkmark {
+.checkbox .checkbox__input_checked ~ .checkbox__checkmark {
   background-color: #2BE080;
 }
 
-.checkbox .checkbox__input:checked ~ .checkbox__checkmark:after {
+.checkbox .checkbox__input_checked ~ .checkbox__checkmark:after {
   left: 19px;
 }
 
@@ -159,7 +160,7 @@
   background-color: #E8E8E8;
 }
 
-.checkbox:hover .checkbox__input:checked ~ .checkbox__checkmark {
+.checkbox:hover .checkbox__input_checked ~ .checkbox__checkmark {
   background-color: #2BE080;
 }
 
