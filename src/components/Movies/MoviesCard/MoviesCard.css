@@ -1,0 +1,171 @@
+.elements {
+  background: #F9F9F9;
+}
+
+.elements__item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 450px) {
+  .elements__item {
+    flex-direction: column-reverse;
+  }
+}
+
+.elements__text {
+  margin-left: 20px;
+}
+
+@media (max-width: 450px) {
+  .elements__text {
+    height: 64px;
+    margin-left: 13px;
+  }
+}
+
+.elements__title {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  margin: 0;
+  margin-top: 22px;
+  margin-bottom: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 450px;
+}
+
+@media (max-width: 768px) {
+  .elements__title {
+    font-size: 12px;
+    line-height: 15px;
+    margin-top: 14px;
+    margin-bottom: 4px;
+  }
+}
+
+@media (max-width: 560px) {
+  .elements__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 450px) {
+  .elements__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 250px;
+  }
+}
+
+.elements__title:hover {
+  overflow: visible;
+}
+
+.elements__time {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  color: #A0A0A0;
+}
+
+.elements__like {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  width: 14px;
+  height: 12px;
+  border: none;
+  background: none;
+  background-image: url(../../../images/likewhite.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .elements__like {
+    position: absolute;
+    top: 184px;
+    left: 270px;
+  }
+}
+
+.elements__like_active {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  width: 14px;
+  height: 12px;
+  border: none;
+  background: none;
+  background-image: url(../../../images/likered.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .elements__like_active {
+    position: absolute;
+    top: 184px;
+    left: 270px;
+  }
+}
+
+.elements__like_delete {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  width: 12px;
+  height: 10px;
+  border: none;
+  background: none;
+  background-image: url(../../../images/delete.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  .elements__like_delete {
+    position: absolute;
+    top: 184px;
+    left: 270px;
+  }
+}
+
+.elements__img-container {
+  height: 134px;
+}
+
+@media (max-width: 450px) {
+  .elements__img-container {
+    height: 168px;
+    margin: 0 auto;
+  }
+}
+
+.elements__image {
+  width: 220px;
+  height: 122px;
+  margin: 6px 6px 6px 0;
+}
+
+@media (max-width: 450px) {
+  .elements__image {
+    height: 168px;
+    width: 300px;
+    margin: 0;
+  }
+}
